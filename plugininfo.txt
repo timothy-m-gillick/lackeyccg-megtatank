@@ -1,0 +1,119 @@
+<plugin>
+
+<playerstat>
+	<label>Armor Points</label>
+	<initialvalue>40</initialvalue>
+</playerstat>
+
+<deckzone>
+	<label>Defense Force Deck</label>
+	<gamezonetoloadto>Defense Forces</gamezonetoloadto>
+	<shuffle>yes</shuffle>
+</deckzone>
+
+<deckzone>
+     <label>Mega Tank Deck</label>
+     <gamezonetoloadto>Mega Tank</gamezonetoloadto>
+     <shuffle>yes</shuffle>
+</deckzone>
+
+<gamezone>
+     <label>Hand</label>
+     <visibletoowner>yes</visibletoowner>
+     <visibletoothers>no</visibletoothers>
+</gamezone>
+
+
+<gamezone>
+     <label>Defense Forces</label>
+     <isshared>yes</isshared>
+</gamezone>
+<gamezone>
+     <label>Mega Tank</label>
+     <isshared>yes</isshared>
+</gamezone>
+
+<gamezone>
+     <label>Transit Pile</label>
+     <visibletoowner>yes</visibletoowner>
+     <visibletoothers>yes</visibletoothers>
+</gamezone>
+<gamezone>
+     <label>Casualty Pile</label>
+     <visibletoowner>yes</visibletoowner>
+     <visibletoothers>yes</visibletoothers>
+</gamezone>
+<gamezone>
+     <label>Mega Tank Removed</label>
+     <visibletoowner>yes</visibletoowner>
+     <visibletoothers>yes</visibletoothers>
+</gamezone>
+
+
+<phase><label>Deploy Defenders Phase</label></phase>
+<phase><label>Reload Phase</label></phase>
+<phase><label>Attack Phase</label></phase>
+<phase><label>Counter Attack Phase</label></phase>
+<phase><label>Movement Phase</label></phase>
+<phase><label>End</label></phase>
+
+<generalfunction>
+	<label>Deploy Defenders</label>
+	<kind>TRANSFERCARD</kind>
+	<sourceowner>shared</sourceowner>
+	<sourcegamezone>Defense Forces</sourcegamezone>
+	<sourceposition>top</sourceposition>
+	<destinationowner>table</destinationowner>
+	<includeasbutton>yes</includeasbutton>
+</generalfunction>
+
+
+<generalfunction>
+	<label>Reload</label>
+	<kind>TRANSFERCARD</kind>
+	<sourceowner>shared</sourceowner>
+	<sourcegamezone>Mega Tank</sourcegamezone>
+	<sourceposition>top</sourceposition>
+	<destinationgamezone>Hand</destinationgamezone>
+	<includeasbutton>yes</includeasbutton>
+</generalfunction>
+
+<generalfunction>
+	<label>Movement</label>
+	<kind>TRANSFERCARD</kind>
+	<sourceowner>shared</sourceowner>
+	<sourcegamezone>Casualty Pile</sourcegamezone>
+	<sourceposition>top</sourceposition>
+	<destinationgamezone>Transit Pile</destinationgamezone>
+	<includeasbutton>yes</includeasbutton>
+</generalfunction>
+
+<generalfunction>
+	<label>Previous Phase</label>
+	<kind>PREVIOUSPHASE</kind>
+	<sourceowner>shared</sourceowner>
+	<includeasbutton>yes</includeasbutton>
+</generalfunction>
+<generalfunction>
+	<label>Next Phase</label>
+	<kind>NEXTPHASE</kind>
+	<sourceowner>shared</sourceowner>
+	<includeasbutton>yes</includeasbutton>
+</generalfunction>
+<generalfunction>
+	<label>Previous Turn</label>
+	<kind>PREVIOUSTURN</kind>
+	<sourceowner>shared</sourceowner>
+	<includeasbutton>yes</includeasbutton>
+</generalfunction>
+<generalfunction>
+	<label>Next Turn</label>
+	<kind>NEXTTURN</kind>
+	<sourceowner>shared</sourceowner>
+	<includeasbutton>yes</includeasbutton>
+
+</generalfunction>
+
+<generalfunction><label>Roll Die</label><kind>ROLLD6</kind><includeasbutton>yes</includeasbutton></generalfunction>
+
+</plugin>
