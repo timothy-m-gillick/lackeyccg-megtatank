@@ -1,0 +1,5 @@
+MegaTank	08-03-22
+plugins/MegaTank/plugininfo.txt	https://github.com/timothy-m-gillick/lackeyccg-megtatank/raw/main/plugininfo.txt	277227
+plugins/MegaTank/sets/setimages/general/cardback.jpg	https://github.com/timothy-m-gillick/lackeyccg-megtatank/raw/main/cardback.jpg	527312
+CardGeneralURLs:		
+https://drive.google.com/drive/folders/1tMX5fk8XonN0nf_grVLO7FzRdT3p8l9W?usp=sharing
